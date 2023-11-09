@@ -1,0 +1,140 @@
+[
+    {
+        "local": "auditorio",
+        "distancia": "52.29",
+        "latitude": "-27.608355",
+        "longitude": "-48.633345"
+    },
+    {
+        "local": "labic-1",
+        "distancia": "54.67",
+        "latitude": "-27.608155",
+        "longitude": "-48.633180"
+    },
+    {
+        "local": "acesso-quadra",
+        "distancia": "57.93",
+        "latitude": "-27.608341",
+        "longitude": "-48.633263"
+    },
+    {
+        "local": "mesa",
+        "distancia": "63.5",
+        "latitude": "-27.608439",
+        "longitude": "-48.633288"
+    },
+    {
+        "local": "laje-2",
+        "distancia": "68.94",
+        "latitude": "-27.608464",
+        "longitude": "-48.633267"
+    },
+    {
+        "local": "biblioteca",
+        "distancia": "82.9",
+        "latitude": "-27.608604",
+        "longitude": "-48.633205"
+    },
+    {
+        "local": "laje-1",
+        "distancia": "84.11",
+        "latitude": "-27.608464",
+        "longitude": "-48.633043"
+    },
+    {
+        "local": "frente-ifsc",
+        "distancia": "131.77",
+        "latitude": "-27.608117",
+        "longitude": "-48.632395"
+    },
+    {
+        "local": "frente-bistek",
+        "distancia": "1014.65",
+        "latitude": "-27.606824",
+        "longitude": "-48.623519"
+    },
+    {
+        "local": "multiuso",
+        "distancia": "2285.27",
+        "latitude": "-27.603642",
+        "longitude": "-48.610991"
+    },
+    {
+        "local": "lab-com",
+        "distancia": "54.89",
+        "latitude": "-27.608245",
+        "longitude": "-48.633300"
+    },
+    {
+        "local": "base-antena",
+        "distancia": "8.75",
+        "latitude": "-27.6080530",
+        "longitude": "-48.6337113"
+    },
+    {
+        "local": "quadra-Meio",
+        "distancia": "24.86",
+        "latitude": "-27.6081130",
+        "longitude": "-48.6335554"
+    },
+    {
+        "local": "quadra-final",
+        "distancia": "37.55",
+        "latitude": "-27.6080848",
+        "longitude": "-48.6334055"
+    },
+    {
+        "local": "labic-2",
+        "distancia": "48.35",
+        "latitude": "-27.6082194",
+        "longitude": "-48.6333502"
+    },
+    {
+        "local": "Indor-porta-aberta",
+        "distancia": "59.71",
+        "latitude": "-27.608177",
+        "longitude": "-48.633219"
+    },
+    {
+        "local": "Indor-porta-fechada",
+        "distancia": "59.71",
+        "latitude": "-27.6081634",
+        "longitude": "-48.6338594"
+    },
+    {
+        "local": "portaria-frente",
+        "distancia": "138.17",
+        "latitude": "-27.6081508",
+        "longitude": "-48.6323943"
+    },
+    {
+        "local": "inicio-beira-mar",
+        "distancia": "1999",
+        "latitude": "-27.6039654",
+        "longitude": "-48.6141063"
+    },
+    {
+        "local": "fim-beira-mar",
+        "distancia": "3015",
+        "latitude": "-27.6026611",
+        "longitude": "-48.6023764"
+    },
+    {
+        "local": "abrao-beira-mar",
+        "distancia": "3580",
+        "latitude": "-27.611220",
+        "longitude": "-48.597652"
+    },
+    {
+        "local": "posto-perto-ifsc",
+        "distancia": "407.45",
+        "latitude": "-27.604444",
+        "longitude": "-48.632901"
+    },
+    {
+        "local": "mundo-car",
+        "distancia": "1970",
+        "latitude": "-27.5958768",
+        "longitude": "-48.6191918"
+    }
+]
