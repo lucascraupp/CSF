@@ -3,7 +3,7 @@
 ## Introdução
 
 
-As medições foram conduzidas por meio da utilização do dispositivo [IoT DevKit - LoRaWAN](https://www.robocore.net/tutoriais/iot-devkit-introducao) em uma série de campanhas. O objetivo dessas campanhas era coletar dados na área central de São José, em Santa Catarina, o gateway utilizado estava posicionado no topo da caixa d'água do IFSC-SJ, em uma altura aproximada de 15 metros. Neste repositório, você encontrará os dados coletados, bem como uma análise dos mesmos.
+As medições foram conduzidas por meio da utilização do dispositivo [IoT DevKit - LoRaWAN](https://www.robocore.net/tutoriais/iot-devkit-introducao) em uma série de campanhas. O objetivo dessas campanhas era coletar dados na área central de São José, em Santa Catarina, o gateway utilizado estava posicionado no topo da caixa d'água do IFSC-SJ, em uma altura aproximada de 18 metros. Neste repositório, você encontrará os dados coletados, bem como uma análise dos mesmos.
 
 ## Fundamentação teórica
 
@@ -33,36 +33,29 @@ onde:
 A distribuição log-normal descreve os efeitos aleatórios do sombreamento, que ocorrem em vários locais próximos que possuem a separação $T-R$ , mas com diferentes níveis de ruído no caminho de propagação. o sombreamento log-normal implica que os níveis de sinal medidos em uma separação $T-R$ específica seguem uma distribuição gaussiana (normal) em torno da média que depende da distância.
 ## Medições
 
-Nas tabelas a seguir são apreentados os valores de latitude e longitude dos pontos de medições.
-### Coordenadas dos pontos *indoor*
-
-|        local        | distância (m) |   latitude  |  longitude  |
-|:-------------------:|:-------------:|:-----------:|:-----------:|
-| gateway             |         -     | -27.60795022| -48.63369853|
-| Indor-porta-aberta  |         59,71 | -27.608177  | -48.633219  |
-| Indor-porta-fechada |         59,71 | -27.6081634 | -48.6338594 |
-| auditorio           |         52,29 | -27.608355  | -48.633345  |
-| labic-1             |         54,67 | -27.608155  | -48.633180  |
-| acesso-quadra       |         57,93 | -27.608341  | -48.633.263 |
-| mesa                |          63,5 | -27.608439  | -48.633288  |
-| biblioteca          |          82,9 | -27.608604  | -48.633205  |
-| labic-2             |         48,35 | -27.6082194 | -48.6333502 |
-| frente-ifsc         |        131,77 | -27.608117  | -48.632395  |
-| lab-com             |         54,89 | -27.608245  | -48.633300  |
+Na tabela a seguir são apreentados os valores de latitude e longitude dos pontos de medições.
 
 ### Coordenadas dos pontos *outdoor*
 
-|        local        | distância (m) |   latitude  |  longitude  |
-|:-------------------:|:-------------:|:-----------:|:-----------:|
-| frente-bistek       |       1014,65 | -27.606824  | -48.623519  |
-| multiuso            |       2285,27 | -27.603.642 | -48.610991  |
-| laje-1              |         84,11 | -27.608464  | -48.633043  |
-| portaria-frente     |        138,17 | -27.6081508 | -48.6323943 |
-| inicio-beira-mar    |          1999 | -27.6039654 | -48.6141063 |
-| fim-beira-mar       |          3015 | -27.6026611 | -48.6023764 |
-| abraao-beira-mar    |          3580 | -27.611220  | -48.597652  |
-| posto-perto-ifsc    |        407,45 | -27.604444  | -48.632901  |
-| mundo-car           |          1970 | -27.5958768 | -48.6191918 |
+|      Local            |   Distância (m)  |     Latitude     |    Longitude     |
+|:---------------------:|:----------------:|:----------------:|:-----------------:|
+| Milium                |  189.91          | -27.000000       | -48.641689       |
+| MundoCar              | 1970.00          | -27.595877       | -48.619192       |
+| Início da Beira-Mar   | 1999.00          | -27.603965       | -48.614106       |
+| Fim da Beira-Mar      | 3015.00          | -27.602661       | -48.602376       |
+| Posto Perto IFSC      |  407.45          | -27.604444       | -48.632901       |
+| Laje                  |   84.11          | -27.608464       | -48.633043       |
+| Florifarma            |  206.08          | -27.607763       | -48.661695       |
+| Bradesco              |  544.97          | -27.595768       | -48.643806       |
+| Multiuso              | 2285.27          | -27.603642       | -48.610991       |
+| Frente IFSC           | 131.77           | -27.608117       | -48.632395       |
+| Frente Bistek         | 1014.65          | -27.606824       | -48.623519       |
+| Abraão Beira-Mar      | 3580.00          | -27.611220       | -48.597652       |
+| Imobiliária Ideal     |  473.45          | -27.604298       | -48.635705       |
+| Anhanguera            | 1060.46          | -27.608923       | -48.641857       |
+
+
+
 ## Simulação dos pontos *outdoor* no *Radio Mobile*
 
 Os pontos das medições *outdoor* foram utilizados para simulação com o *software* *Radio Mobile* e os resultados estão em arquivos html no diretório [radio-mobile](./radio-mobile/).
@@ -71,28 +64,36 @@ Os pontos das medições *outdoor* foram utilizados para simulação com o *soft
 
 A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (RSSI) e Perda de caminho (PL) entre o dados medidos, calculados e simulados, considerando somente os pontos *outdoor*.
 
-| Local            | RSSI  medido (dBm) | PL  medido (dB) | RSSI  simulado² (dBm) | PL  simulado² (dB) | RSSI calculado  (N = 2,519) (dBm) | RSSI calculado + desvio¹ |
-|------------------|--------------------|-----------------|----------------------|-------------------|-----------------------------|---------------------------------|
-| laje-1           | -82,43             | 96,32           | -61,59               | 75,48             | -96,66                      | -96,31                          |
-| abrao-beira-mar  | -102,60            | 116,49          | -101,96              | 115,85            | -101,57                     | -97,49                          |
-| posto-perto-ifsc | -77,80             | 91,69           | -76,91               | 90,80             | -99,69                      | -90,44                          |
-| fim-beira-mar    | -108,05            | 121,94          | -91,91               | 105,80            | -65,45                      | -69,03                          |
-| frente-ifsc      | -90,46             | 104,34          | -62,16               | 76,05             | -60,53                      | -81,88                          |
-| frente-bistek    | -96,80             | 110,69          | -79,38               | 93,27             | -87,78                      | -84,82                          |
-| multiuso         | -100,42            | 114,31          | -88,14               | 102,03            | -95,03                      | -98,35                          |
-| mundo-car        | -109,83            | 123,72          | -87,18               | 101,07            | -95,19                      | -108,20                         |
-| inicio-beira-mar | -98,87             | 112,76          | -85,98               | 99,87             | -77.8                       | -91,53                          |
-> 1. Valores obtidos adicionando uma variável aleatória gaussiana de média 0 e desvio padrão de 10,91 ao valor calculado, então podem mudar a cada execução.
-> 2. Simulação realizada no software *Radio Mobile* 
+| Local               | RSSI medido (dBm) | PL medido (dB)  | RSSI simulado (dBm) | PL simulado (dB) |
+|---------------------|-------------------|-----------------|---------------------|------------------|
+| Milium              | -109.045455       | 122.935455      | -90.85              | 102.83           |
+| MundoCar            | -109.833333       | 123.723333      | -87.18              | 101.07           |
+| Início da Beira-Mar | -98.87            | 112.76          | -85.98              | 99.87            |
+| Fim da Beira-Mar    | -108.05           | 121.94          | -91.91              | 105.80           |
+| Posto Perto IFSC    | -77.80            | 91.69           | -76.91              | 90.80            |
+| Laje                | -82.43            | 96.32           | -61.59              | 75.48            |
+| Florifarma          | -101.090909       | 114.980909      | -97.71              | 109.71           |
+| Bradesco            | -107.000000       | 120.890000      | -88.72              | 100.73           |
+| Centro Multiuso     | -100.421053       | 114.311053      | -88.14              | 102.03           |
+| Frente IFSC         | -90.46            | 104.34          | -62.16              | 76.05            |
+| Frente Bistek       | -96.80            | 110.69          | -79.38              | 93.27            |
+| Abraão Beira-Mar    | -102.60           | 116.49          | -101.96             | 115.85           |
+| Imobiliária Ideal   | -85.656250        | 99.546250       | -73.66              | 85.64            |
+| Anhanguera          | -96.608696        | 110.498696      | -119.09             | 131.09           |
 
-## Parâmetros obtidos
+
+
+<!-- > 1. Valores obtidos adicionando uma variável aleatória gaussiana de média 0 e desvio padrão de 10,91 ao valor calculado, então podem mudar a cada execução.
+> 2. Simulação realizada no software *Radio Mobile*  -->
+
+<!-- ## Parâmetros obtidos
 A partir do método de minimização de erro MSE utilizado no código, o valor do parâmetro N obtido está representado na tabela abaixo.
 
 |        | p0 ($dB$) | d0 (m)  | N     |
 |--------|------------|---------|-------|
-| Outdoor| -77,8      | -80,89  | 2,519 |
-> Não houveram dados suficientes para estimar um fator N para os dados Indoor
-## Mapa de calor
+| Outdoor| -77,8      | -80,89  | 2,519 | -->
+
+<!-- ## Mapa de calor
 
 Com o N estimado pela minimização citada acima, foram obtidos estes valores de RSSI (estes valores utilizam uma variável aleatória gaussiana e podem mudar a cada execução).
 
@@ -109,4 +110,4 @@ Com o N estimado pela minimização citada acima, foram obtidos estes valores de
 
 Abaixo o mapa de calor:
 
-![](mapa.png)
+![](mapa.png) -->

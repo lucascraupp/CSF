@@ -1,51 +1,41 @@
 [
     {
-        "local": "auditorio",
-        "distancia": "52.29",
-        "latitude": "-27.608355",
-        "longitude": "-48.633345"
+        "local": "anhanguera",
+        "distancia": "1060.46",
+        "latitude": "-27.6089226",
+        "longitude": "-48.6418569"
     },
     {
-        "local": "labic-1",
-        "distancia": "54.67",
-        "latitude": "-27.608155",
-        "longitude": "-48.633180"
+        "local": "ideal",
+        "distancia": "473.45",
+        "latitude": "-27.6042976",
+        "longitude": "-48.6357047"
     },
     {
-        "local": "acesso-quadra",
-        "distancia": "57.93",
-        "latitude": "-27.608341",
-        "longitude": "-48.633263"
+        "local": "milium",
+        "distancia": "189.91",
+        "latitude": "-90.0000000",
+        "longitude": "-48.6416895"
     },
     {
-        "local": "mesa",
-        "distancia": "63.5",
-        "latitude": "-27.608439",
-        "longitude": "-48.633288"
+        "local": "bradesco",
+        "distancia": "544.97",
+        "latitude": "-27.5957679",
+        "longitude": "-48.6438065"
     },
     {
-        "local": "laje-2",
-        "distancia": "68.94",
-        "latitude": "-27.608464",
-        "longitude": "-48.633267"
+        "local": "florifarma",
+        "distancia": "206.08",
+        "latitude": "-27.6077626",
+        "longitude": "-48.6616950"
     },
-    {
-        "local": "biblioteca",
-        "distancia": "82.9",
-        "latitude": "-27.608604",
-        "longitude": "-48.633205"
-    },
+
+
     {
         "local": "laje-1",
         "distancia": "84.11",
         "latitude": "-27.608464",
         "longitude": "-48.633043"
-    },
-    {
-        "local": "frente-ifsc",
-        "distancia": "131.77",
-        "latitude": "-27.608117",
-        "longitude": "-48.632395"
     },
     {
         "local": "frente-bistek",
@@ -60,52 +50,16 @@
         "longitude": "-48.610991"
     },
     {
-        "local": "lab-com",
-        "distancia": "54.89",
-        "latitude": "-27.608245",
-        "longitude": "-48.633300"
+        "local": "frente-ifsc",
+        "distancia": "131.77",
+        "latitude": "-27.608117",
+        "longitude": "-48.632395"
     },
     {
         "local": "base-antena",
         "distancia": "8.75",
         "latitude": "-27.6080530",
         "longitude": "-48.6337113"
-    },
-    {
-        "local": "quadra-Meio",
-        "distancia": "24.86",
-        "latitude": "-27.6081130",
-        "longitude": "-48.6335554"
-    },
-    {
-        "local": "quadra-final",
-        "distancia": "37.55",
-        "latitude": "-27.6080848",
-        "longitude": "-48.6334055"
-    },
-    {
-        "local": "labic-2",
-        "distancia": "48.35",
-        "latitude": "-27.6082194",
-        "longitude": "-48.6333502"
-    },
-    {
-        "local": "Indor-porta-aberta",
-        "distancia": "59.71",
-        "latitude": "-27.608177",
-        "longitude": "-48.633219"
-    },
-    {
-        "local": "Indor-porta-fechada",
-        "distancia": "59.71",
-        "latitude": "-27.6081634",
-        "longitude": "-48.6338594"
-    },
-    {
-        "local": "portaria-frente",
-        "distancia": "138.17",
-        "latitude": "-27.6081508",
-        "longitude": "-48.6323943"
     },
     {
         "local": "inicio-beira-mar",
