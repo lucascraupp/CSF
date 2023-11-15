@@ -1,94 +1,32 @@
 [
     {
-        "local": "anhanguera",
-        "distancia": "1060.46",
-        "latitude": "-27.6089226",
-        "longitude": "-48.6418569"
+        "local": "Milium",
+        "distancia": "1235.06",
+        "latitude": "-27.6075539",
+        "longitude": "-48.6390241"
     },
     {
-        "local": "ideal",
-        "distancia": "473.45",
-        "latitude": "-27.6042976",
-        "longitude": "-48.6357047"
+        "local": "Florifarma",
+        "distancia": "2807.82",
+        "latitude": "-27.6077626",
+        "longitude": "-48.6616950"
     },
     {
-        "local": "milium",
-        "distancia": "189.91",
-        "latitude": "-90.0000000",
-        "longitude": "-48.6416895"
-    },
-    {
-        "local": "bradesco",
-        "distancia": "544.97",
+        "local": "Bradesco",
+        "distancia": "1785.89",
         "latitude": "-27.5957679",
         "longitude": "-48.6438065"
     },
     {
-        "local": "florifarma",
-        "distancia": "206.08",
-        "latitude": "-27.6077626",
-        "longitude": "-48.6616950"
-    },
-
-
-    {
-        "local": "laje-1",
-        "distancia": "84.11",
-        "latitude": "-27.608464",
-        "longitude": "-48.633043"
+        "local": "Imobiliária Ideal",
+        "distancia": "476.73",
+        "latitude": "-27.6042976",
+        "longitude": "-48.6357047"
     },
     {
-        "local": "frente-bistek",
-        "distancia": "1014.65",
-        "latitude": "-27.606824",
-        "longitude": "-48.623519"
-    },
-    {
-        "local": "multiuso",
-        "distancia": "2285.27",
-        "latitude": "-27.603642",
-        "longitude": "-48.610991"
-    },
-    {
-        "local": "frente-ifsc",
-        "distancia": "131.77",
-        "latitude": "-27.608117",
-        "longitude": "-48.632395"
-    },
-    {
-        "local": "base-antena",
-        "distancia": "8.75",
-        "latitude": "-27.6080530",
-        "longitude": "-48.6337113"
-    },
-    {
-        "local": "inicio-beira-mar",
-        "distancia": "1999",
-        "latitude": "-27.6039654",
-        "longitude": "-48.6141063"
-    },
-    {
-        "local": "fim-beira-mar",
-        "distancia": "3015",
-        "latitude": "-27.6026611",
-        "longitude": "-48.6023764"
-    },
-    {
-        "local": "abrao-beira-mar",
-        "distancia": "3580",
-        "latitude": "-27.611220",
-        "longitude": "-48.597652"
-    },
-    {
-        "local": "posto-perto-ifsc",
-        "distancia": "407.45",
-        "latitude": "-27.604444",
-        "longitude": "-48.632901"
-    },
-    {
-        "local": "mundo-car",
-        "distancia": "1970",
-        "latitude": "-27.5958768",
-        "longitude": "-48.6191918"
+        "local": "Anhanguera",
+        "distancia": "840.15",
+        "latitude": "-27.6089226",
+        "longitude": "-48.6418569"
     }
 ]

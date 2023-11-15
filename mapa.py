@@ -22,7 +22,7 @@ def cria_mapa(df: pd.DataFrame, nome_mapa, zoom, radius, centro):
     # Criação do objeto HeatMap com as coordenadas
     heatmap = HeatMap(
         coordenadas,
-        min_opacity=0.1,
+        min_opacity=0.3,
         radius=radius,
         gradient={
             "0.2": "deepskyblue",
