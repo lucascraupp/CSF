@@ -81,15 +81,9 @@ A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (
 
 ### Potência recebida no ponto de referência:
 
-$$ P_r(235) = \frac{0,025 * 1,584 * 3,162 * 0,32^2}{157,91 * 55.225 * 7,943} =>
+$$P_r(235) = \frac{0,025 * 1,584 * 3,162 * 0,32^2}{157,91 * 55.225 * 7,943} => \frac{0,134}{69,267 * 10^6}$$
 
-\frac{0,134}{69,267 * 10^6}
-$$
-
-$$
-P_r(235) = 1,934 * 10^{-10} W =>  -67,134 dBm
-
-$$
+$$P_r(235) = 1,934 * 10^{-10} W => -67,134 dBm$$
 
 
 ### Expoente de perda $(n)$
