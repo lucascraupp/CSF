@@ -10,10 +10,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 PotTx = 13.89
 
 
-def modelo(distancias, N, d0, pl_d0):
-    return pl_d0 - (10 * N * np.log10(np.divide(distancias, d0)))
-
-
 def coleta_dados(path):
     files = os.listdir(f"{basedir}/{path}")
 
@@ -57,13 +53,10 @@ def processa_dados(df: pd.DataFrame, d0, rssi_0):
     return parametro
 
 
-# df_indoor = coleta_dados('data/indoor')
 df_outdoor = coleta_dados("data/outdoor")
 
-# parametro_indoor = processa_dados(df_indoor, 52.29, -80.888889)
 parametro_outdoor = processa_dados(df_outdoor, 407.45, -77.800000)
 
-# print(parametro_indoor)
 print(parametro_outdoor)
 
 
@@ -74,21 +67,3 @@ cria_mapa(
     radius=30,
     centro=[-27.606824, -48.623519],
 )
-
-
-print("\n\nPrevisão a cada 500 metros")
-distancias = np.arange(1, 3502, 500)
-rssis = modelo(distancias=distancias, N=2.519, d0=407.45, pl_d0=-77.800000)
-std = df_outdoor["RSSI"].std()
-print(std)
-for rssi in rssis:
-    rssi = rssi + np.random.normal(0, std)  # Soma da variável aleatória gaussiana
-    print(f"{rssi}")
-
-print("\n\nPrevisão das distancias medidas")
-rssis_calculado = modelo(
-    distancias=df_outdoor["Distc"], N=2.519, d0=407.45, pl_d0=-77.800000
-)
-for rssi in rssis_calculado:
-    rssi = rssi + np.random.normal(0, std)  # Soma da variável aleatória gaussiana
-    print(f"{rssi}")

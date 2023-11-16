@@ -17,7 +17,7 @@ A perda de caminho média em grande escala para uma separação transmissor ($T_
 $$ \overline{PL}(dB) = \overline{PL}(d_0) + 10n\log_{}\left(\frac{d}{d_0}\right)
 $$
 
-onde:
+Onde:
 - $\overline{PL}(dB)$ é a perda de caminho estimado em $dB$
 - $\overline{PL}(d_0)$ é a perda de caminho na distância de referência em $dB$
 - $n$ é expoente de perda de caminho que indica a velocidade com a qual essa perda aumenta com relação à distância e depende do ambiente de propagação específico.
@@ -25,15 +25,26 @@ onde:
 - $d$ é a distância de separação $T_x-R_x$
 - As barras na equação indicam a média conjunta de todos os valores possíveis de perda de caminho para determinado valor de $d$.
 
-### Sombreamento log-normal
+### Modelo de Friis
+Para realizar o cálculo do expoente de perda, primeiro deve-se encontrar a potência recebida na distância de referência ($d_0$). Por meio da equação abaixo:
 
-<!-- a equação anterior não considera o fato de o ruído ambiental ao redor pode ser diferente em dois locais distintos tendo a mesma separação $T-R$, o que leva a sinais medidos diferentes do valor médio da equação anterior -->
+$$ P_r(d) = \frac{P_t * G_t * G_r * \lambda^2}{(4\pi)^2 * d^2 * L}
+$$
 
-A distribuição log-normal descreve os efeitos aleatórios do sombreamento, que ocorrem em vários locais próximos que possuem a separação $T_x-R_x$ , mas com diferentes níveis de ruído no caminho de propagação. O sombreamento log-normal implica que os níveis de sinal medidos em uma separação $T_x-R_x$ específica seguem uma distribuição gaussiana (normal) em torno da média que depende da distância.
+Onde:
+- $P_r(d)$ é a potência recebida em $W$, a uma determinada distância $d$ em $m$.
+- $P_t$ é a potência transmitida em $W$.
+- $G_t$ é o ganho da antena transmissora em $W$.
+- $G_r$ é o ganho da antena receptora em $W$.
+- $\lambda$ é o comprimento da onda em $m$.
+- $d$ é a distância em $m$.
+- $L$ é a soma das perdas nas linhas do $T_x$ e $R_x$ em $W$.
 
-## Cálculos
+### Cáluclo do expoente de perna $(n)$
 
-@TODO
+$$ J(n) = \sum_{i=1}^k (P_i - E_i)^2$$
+
+$$ E_i = P_0 - 10*n * \log_{10}(\frac{d_i}{d_0})$$
 
 ## Medições
 
@@ -53,45 +64,86 @@ Na tabela a seguir são apreentados os valores de latitude e longitude dos ponto
 
 Os pontos das medições *outdoor* foram utilizados para simulação com o *software* *Radio Mobile* e os resultados podem ser conferidos no diretório [radio-mobile](./radio-mobile/).
 
-## Comparação entre dados calculados, simulados e medidos
+## Comparação entre dados simulados e medidos
 
-A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (RSSI) e Perda de caminho (PL) entre o dados calculados, simulados e medidos.
+A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (RSSI) e Perda de caminho (PL) entre o dados simulados e medidos.
 
-| Local               | RSSI calculado (dBm) | PL calculado (dB)  | RSSI simulada (dBm)  | PL simulada (dB) | RSSI medido (dBm) | PL medido (dB) |
-|---------------------|----------------------|--------------------|----------------------|------------------|-------------------|----------------|
-| Milium              | -110                 | 122.935455         | -90.85               | 102.83           | -109.045455       | 122.935455     |
-| Florifarma          | -100                 | 114.980909         | -97.71               | 109.71           | -101.090909       | 114.980909     |
-| Bradesco            | -104.5               | 120.890000         | -88.72               | 100.73           | -107.000000       | 120.890000     |
-| Imobiliária Ideal   | -84                  | 99.546250          | -73.66               | 85.64            | -85.6562500       | 99.5462500     |
-| Anhanguera          | -91                  | 110.498696         | -119.09              | 131.09           | -96.6086960       | 110.498696     |
+| Local               | RSSI simulada (dBm)  | PL simulada (dB) | RSSI medido (dBm) | PL medido (dB) |
+|---------------------|----------------------|------------------|-------------------|----------------|
+| Milium              | -86.92               | -                | -109.045455       | 122.935455     |
+| Florifarma          | -97.71               | 109.71           | -101.090909       | 114.980909     |
+| Bradesco            | -88.72               | 100.73           | -107.000000       | 120.890000     |
+| Imobiliária Ideal   | -80.08               | -                | -85.6562500       | 99.5462500     |
+| Anhanguera          | -107.79              | 119.79           | -96.6086960       | 110.498696     |
+
+
+## Cálculos
+
+### Potência recebida no ponto de referência:
+
+$$ P_r(235) = \frac{0,025 * 1,584 * 3,162 * 0,32^2}{157,91 * 55.225 * 7,943} =>
+
+\frac{0,134}{69,267 * 10^6}
+$$
+
+$$
+P_r(235) = 1,934 * 10^{-10} W =>  -67,134 dBm
+
+$$
+
+
+### Expoente de perda $(n)$
+
+Utilizando o código abaixo, obteve-se o valor de $n$ simulado e medido:
+
+```matlab
+clear all; close all; clc;
+
+syms n
+
+% Potências calculadas no RadioMobile
+
+A = [235 -67.134    % Ponto de referência
+    461 -80.08      % imobiliaria ideal
+    1204 -86.92     % Millium
+    1786 -88.72     % Bradesco
+    2779 -97.71];   % Florifarma
+
+% Potência medida
+
+B = [235 -67.12     % Ponto de referência
+    461 -84         % Imobiliária Ideal
+    926 -91         % Anhanguera
+    1786 -104.5];   % Bradesco
+
+J = 0;
+for i = 1:5
+   Ei(i) = A(1,2) - 10*n*log10(A(i,1)/A(1,1));
+   J = J + (A(i,2)-Ei(i))^2;
+end
+
+J2 = diff(J);
+N = double(solve(J2,n))
+
+J = 0;
+for i = 1:4
+   Ei(i) = B(1,2) - 10*n*log10(B(i,1)/B(1,1));
+   J = J + (B(i,2)-Ei(i))^2;
+end
+
+J2 = diff(J);
+N = double(solve(J2,n))
+```
+
+#### Resultados:
+
+|   | Simualdo | Medido |
+|:-:|:--------:|:------:|
+| n | 2.7682   | 4.2829 |
 
 
 
-<!-- > 1. Valores obtidos adicionando uma variável aleatória gaussiana de média 0 e desvio padrão de 10,91 ao valor calculado, então podem mudar a cada execução.
-> 2. Simulação realizada no software *Radio Mobile*  -->
 
-<!-- ## Parâmetros obtidos
-A partir do método de minimização de erro MSE utilizado no código, o valor do parâmetro N obtido está representado na tabela abaixo.
+# Mapa de Calor
 
-|        | p0 ($dB$) | d0 (m)  | N     |
-|--------|------------|---------|-------|
-| Outdoor| -77,8      | -80,89  | 2,519 | -->
-
-<!-- ## Mapa de calor
-
-Com o N estimado pela minimização citada acima, foram obtidos estes valores de RSSI (estes valores utilizam uma variável aleatória gaussiana e podem mudar a cada execução).
-
-| Distância (m) | RSSI ($dB$)          |
-|-----------|---------------|
-| 1         | -21.42376652  |
-| 500       | -89.43267884  |
-| 1000      | -97.00470094  |
-| 1500      | -101.43679616 |
-| 2000      | -104.58218069 |
-| 2500      | -107.02225042 |
-| 3000      | -109.01609695 |
-| 3500      | -110.70196579 |
-
-Abaixo o mapa de calor:
-
-![](mapa.png) -->
+![](./data/Mapa_Calor.png)
