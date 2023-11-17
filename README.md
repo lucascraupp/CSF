@@ -141,3 +141,8 @@ N = double(solve(J2,n))
 # Mapa de Calor
 
 ![](./data/Mapa_Calor.png)
+
+
+# Conclusão
+
+Este trabalho enfatizou a necessidade de incorporar variáveis práticas na modelagem de redes LoRaWAN. A análise comparativa entre os dados simulados e os dados medidos revelou diferenças significativas entre os resultados obtidos no Radio-Mobile e aqueles observados em campo. Isso destaca a importância de considerar a influência de condições reais no ambiente de propagação ao projetar e avaliar redes LoRaWAN.
