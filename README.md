@@ -70,10 +70,10 @@ A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (
 
 | Local               | RSSI simulada (dBm)  | PL simulada (dB) | RSSI medido (dBm) | PL medido (dB) |
 |---------------------|----------------------|------------------|-------------------|----------------|
-| Milium              | -86.92               | -                | -109.045455       | 122.935455     |
+| Milium              | -86.92               | 98.89            | -109.045455       | 122.935455     |
 | Florifarma          | -97.71               | 109.71           | -101.090909       | 114.980909     |
 | Bradesco            | -88.72               | 100.73           | -107.000000       | 120.890000     |
-| Imobiliária Ideal   | -80.08               | -                | -85.6562500       | 99.5462500     |
+| Imobiliária Ideal   | -80.08               | 92.06            | -85.6562500       | 99.5462500     |
 | Anhanguera          | -107.79              | 119.79           | -96.6086960       | 110.498696     |
 
 
