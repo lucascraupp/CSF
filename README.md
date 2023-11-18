@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Este trabalho tem o objetivo de coletar dados na área central de São José, em Santa Catarina, por meio do dispositivo [IoT DevKit - LoRaWAN](https://www.robocore.net/tutoriais/iot-devkit-introducao). Com estes dados, espera-se poder realizar o cálculo do expoente de perda, bem como determinar o alcance efetivo do gateway localizado no topo da caixa d'água do IFSC-SJ, em uma altura aproximada de 18 metros.
+Este trabalho tem o objetivo de coletar dados na área central de São José, em Santa Catarina, por meio do dispositivo [IoT DevKit - LoRaWAN](https://www.robocore.net/tutoriais/iot-devkit-introducao). Com estes dados, espera-se realizar o cálculo do expoente de perda, bem como determinar o alcance efetivo do gateway localizado no topo da caixa d'água do IFSC-SJ, em uma altura aproximada de 18 metros.
 
 ## Fundamentação teórica
 
@@ -10,7 +10,7 @@ Este trabalho tem o objetivo de coletar dados na área central de São José, em
 
 Os modelos de propagação teóricos e baseados em medições indicam que a potência média do sinal recebido diminui de forma logarítmica à medida que a distância aumenta, tanto em canais de rádio internos como externos.
 
-A perda de caminho média em grande escala para uma separação transmissor ($T_x$) e receptor ($R_x$), qualquer $T_x-R_x$ é expressa como a função da distância usando um expoente de perda de caminho, $n$. Como na equação abaixo:
+Na perda de caminho média, em grande escala, para uma separação transmissor ($T_x$) e receptor ($R_x$), qualquer $T_x-R_x$ é expressa como a função da distância usando um expoente de perda de caminho, $n$. Como na equação abaixo:
 
 
 
@@ -18,11 +18,11 @@ $$ \overline{PL}(dB) = \overline{PL}(d_0) + 10n\log_{}\left(\frac{d}{d_0}\right)
 $$
 
 Onde:
-- $\overline{PL}(dB)$ é a perda de caminho estimado em $dB$
-- $\overline{PL}(d_0)$ é a perda de caminho na distância de referência em $dB$
+- $\overline{PL}(dB)$ é a perda de caminho estimado em $dB$.
+- $\overline{PL}(d_0)$ é a perda de caminho na distância de referência em $dB$.
 - $n$ é expoente de perda de caminho que indica a velocidade com a qual essa perda aumenta com relação à distância e depende do ambiente de propagação específico.
 - $d_0$ é a distância de referência próxima determinada pelas medições perto do transmissor.
-- $d$ é a distância de separação $T_x-R_x$
+- $d$ é a distância de separação $T_x-R_x$.
 - As barras na equação indicam a média conjunta de todos os valores possíveis de perda de caminho para determinado valor de $d$.
 
 ### Modelo de Friis
@@ -40,7 +40,7 @@ Onde:
 - $d$ é a distância em $m$.
 - $L$ é a soma das perdas nas linhas do $T_x$ e $R_x$ em $W$.
 
-### Cáluclo do expoente de perna $(n)$
+### Cálculo do expoente de perda $(n)$
 
 $$ J(n) = \sum_{i=1}^k (P_i - E_i)^2$$
 
@@ -48,7 +48,7 @@ $$ E_i = P_0 - 10*n * \log_{10}(\frac{d_i}{d_0})$$
 
 ## Medições
 
-Na tabela a seguir são apreentados os valores de latitude e longitude dos pontos de medições.
+Na tabela a seguir são apresentados os valores de latitude e longitude dos pontos de medições.
 
 ### Coordenadas dos pontos *outdoor*
 
@@ -64,9 +64,9 @@ Na tabela a seguir são apreentados os valores de latitude e longitude dos ponto
 
 Os pontos das medições *outdoor* foram utilizados para simulação com o *software* *Radio Mobile* e os resultados podem ser conferidos no diretório [radio-mobile](./radio-mobile/).
 
-## Comparação entre dados simulados e medidos
+## Comparação entre os dados simulados e medidos
 
-A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (RSSI) e Perda de caminho (PL) entre o dados simulados e medidos.
+A tabela a seguir apresenta uma comparação dos valores de Potência Recebida (RSSI) e Perda de caminho (PL), entre o dados simulados e medidos.
 
 | Local               | RSSI simulada (dBm)  | PL simulada (dB) | RSSI medido (dBm) | PL medido (dB) |
 |---------------------|----------------------|------------------|-------------------|----------------|
