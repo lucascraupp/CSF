@@ -54,11 +54,11 @@ Na tabela a seguir são apreentados os valores de latitude e longitude dos ponto
 
 |      Local            |   Distância (m)  |     Latitude     |    Longitude     |
 |:---------------------:|:----------------:|:----------------:|:----------------:|
-| Milium                | 1235.06          | -27.6075539      | -48.6390241      |
-| Florifarma            | 2807.82          | -27.6077626      | -48.6616950      |
-| Bradesco              | 1785.89          | -27.5957679      | -48.6438065      |
-| Imobiliária Ideal     | 476.73           | -27.6042976      | -48.6357047      |
-| Anhanguera            | 840.15           | -27.6089226      | -48.6418569      |
+| Milium                | 1221             | -27.6075539      | -48.6390241      |
+| Florifarma            | 2779             | -27.6077626      | -48.6616950      |
+| Bradesco              | 1786             | -27.5957679      | -48.6438065      |
+| Imobiliária Ideal     | 461              | -27.6042976      | -48.6357047      |
+| Anhanguera            | 884              | -27.6089226      | -48.6418569      |
 
 ## Simulação dos pontos *outdoor* no *Radio Mobile*
 

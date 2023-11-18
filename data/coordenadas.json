@@ -1,31 +1,31 @@
 [
     {
         "local": "Milium",
-        "distancia": "1235.06",
+        "distancia": "1221",
         "latitude": "-27.6075539",
         "longitude": "-48.6390241"
     },
     {
         "local": "Florifarma",
-        "distancia": "2807.82",
+        "distancia": "2779",
         "latitude": "-27.6077626",
         "longitude": "-48.6616950"
     },
     {
         "local": "Bradesco",
-        "distancia": "1785.89",
+        "distancia": "1786",
         "latitude": "-27.5957679",
         "longitude": "-48.6438065"
     },
     {
         "local": "Imobiliária Ideal",
-        "distancia": "476.73",
+        "distancia": "461",
         "latitude": "-27.6042976",
         "longitude": "-48.6357047"
     },
     {
         "local": "Anhanguera",
-        "distancia": "840.15",
+        "distancia": "884",
         "latitude": "-27.6089226",
         "longitude": "-48.6418569"
     }
