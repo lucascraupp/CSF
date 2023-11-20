@@ -131,7 +131,7 @@ N = double(solve(J2,n))
 
 #### Resultados:
 
-|   | Simualdo | Medido |
+|   | Simulado | Medido |
 |:-:|:--------:|:------:|
 | n | 2.7682   | 4.2829 |
 
